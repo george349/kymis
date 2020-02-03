@@ -3,10 +3,21 @@ import java.util.Scanner;
 
 public class main {
     public static <java> void main(String[] args) throws IOException {
-        Game();
+        name();
+        Game(name(), name());
         newGame();
     }
-        public static int Game () {
+    public static String name (){
+    Scanner in = new Scanner(System.in);
+            System.out.println("Приветствуем вас в Камень\uD83D\uDC8E,Ножницы ✄,Бумага\uD83D\uDCC3");
+            System.out.println("Игрок 1 введите имя");
+    String name1 = in.nextLine();
+            System.out.println("Игрок 2 введите имя");
+    String name2 = in.nextLine();
+
+        return name2;
+    }
+        public static int Game (String name1, String name2) {
             int kw1 = 0;
             int kw2 = 0;
             // System.out.println();
@@ -14,12 +25,12 @@ public class main {
             String k = "камень";
             String n = "ножницы";
             String b = "бумага";
-            Scanner in = new Scanner(System.in);
-            System.out.println("Приветствуем вас в Камень\uD83D\uDC8E,Ножницы ✄,Бумага\uD83D\uDCC3");
-            System.out.println("Игрок 1 введите имя");
-            String name1 = in.nextLine();
-            System.out.println("Игрок 2 введите имя");
-            String name2 = in.nextLine();
+//            Scanner in = new Scanner(System.in);
+//            System.out.println("Приветствуем вас в Камень\uD83D\uDC8E,Ножницы ✄,Бумага\uD83D\uDCC3");
+//            System.out.println("Игрок 1 введите имя");
+//            String name1 = in.nextLine();
+//            System.out.println("Игрок 2 введите имя");
+//            String name2 = in.nextLine();
 
 
             System.out.println(name1 + " выбери значение\n" +
@@ -54,10 +65,13 @@ public class main {
                 if (p2.equals("n")) {
                     System.out.println("выиграл " + name1);
                     kw1 = +1;
+                    return kw1;
                 }
                 if (p2.equals("b")) {
                     System.out.println("выиграл " + name2);
                     kw2 = +1;
+                    return kw2;
+
                 }
             }
             if (p1.equals("b")) {
@@ -67,10 +81,12 @@ public class main {
                 if (p2.equals("k")) {
                     System.out.println("выиграл " + name1);
                     kw1 = +1;
+                    return kw1;
                 }
                 if (p2.equals("n")) {
                     System.out.println("выиграл " + name2);
                     kw2 = +1;
+                    return kw2;
                 }
             }
             if (p1.equals("n")) {
@@ -80,16 +96,20 @@ public class main {
                 if (p2.equals("b")) {
                     System.out.println("выиграл " + name1);
                     kw1 = +1;
+                    return kw1;
                 }
                 if (p2.equals("k")) {
                     System.out.println("выиграл " + name2);
                     kw2 = +1;
+                    return kw2;
+
                 }
             }
-            return kw1;
+            // return kw1;
 
+            return kw1;
         }
-public static void res(){
+public static void res(int kw1, int kw2){
 
             System.out.println("Результаты:");
             System.out.println(kw1);
@@ -111,10 +131,10 @@ public static void res(){
             Scanner scanner = new Scanner(System.in);
             String p = scanner.nextLine();
             if (p.equals(yes)) {
-                Game();
+                Game(name(), name());
             }
             if (p.equals(no)){
-                res();
+                res(1,2);
             }
         }
     }
