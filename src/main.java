@@ -1,15 +1,49 @@
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class main {
     public static <java> void main(String[] args) throws IOException {
+
+        Scanner in = new Scanner(System.in);
+        String[] playersarr = new String[2];
+        playersarr[0] = in.nextLine();
+        playersarr[1] = in.nextLine();
+        System.out.println(Arrays.toString(playersarr));
+        System.out.println("Приветствуем вас в Камень\uD83D\uDC8E,Ножницы ✄,Бумага\uD83D\uDCC3");
         name();
-        Game(name(), name());
+       Game(name(), name());
         newGame();
+
+
+
+
     }
+//    public static void tstres(String[] playersarr){
+//        System.out.println(playersarr);
+//    }
+//    public static String[] testName(){
+//
+//
+//        String[] playersarr = new String[2];
+//        playersarr[0] = "player1";
+//        playersarr[1] = "player2";
+//       // System.out.println(Arrays.toString(playersarr));
+//        return playersarr;
+//
+//    }
+
+
+
+
+
+
+
+
+
     public static String name (){
     Scanner in = new Scanner(System.in);
-            System.out.println("Приветствуем вас в Камень\uD83D\uDC8E,Ножницы ✄,Бумага\uD83D\uDCC3");
+            //System.out.println("Приветствуем вас в Камень\uD83D\uDC8E,Ножницы ✄,Бумага\uD83D\uDCC3");
             System.out.println("Игрок 1 введите имя");
     String name1 = in.nextLine();
             System.out.println("Игрок 2 введите имя");
@@ -115,7 +149,7 @@ public static void res(int kw1, int kw2){
             System.out.println(kw1);
             System.out.println(kw2);
             if (kw1 > kw2) {
-                System.out.println(" Игрок 1-победа");
+                System.out.println( + "победа");//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
             }
             if (kw2 > kw1) {
                 System.out.println( "Игрок2 -победа");
