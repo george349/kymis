@@ -1,12 +1,11 @@
 import java.util.Scanner;
-
-public class main {
+public class Main {
     //    public static <java> void main(String[] args) throws IOException {
 //        name();
 //        Game(name(), name());
 //        newGame();
 //   }
-    public static void name(String[] args) {
+    public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         //  System.out.println("Приветствуем вас в Камень\uD83D\uDC8E,Ножницы ✄,Бумага\uD83D\uDCC3");
         System.out.println("Игрок 1 введите имя");
